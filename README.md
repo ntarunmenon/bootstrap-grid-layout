@@ -6,6 +6,9 @@ Thanks to Maximilian Schwarzmüller from [Academind](https://academind.com/) for
 " target="_blank"><img src="http://img.youtube.com/vi/qmPmwdshCMw/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
+## Code used for this blog
+
+ Code used for this blog is available [here]. 
 ## Bootstrap grid layout.
 
 - Bootstrap grid layout are inspired from flexbox and easy to understand if you know flexbox. 
@@ -89,4 +92,37 @@ At a pixel size of greater than 992px `Row 1 Col 1` and `Row 1 Col 2` will have 
 Anytime the pixel size falls to less than 992 px then the spacing will be split to 4 and 8
 
 ![alt text](ss_03.png "4-8 split")
+
+### Moving stuff within layout. 
+
+Bootstrap uses a flexbox inspired approach to move coloums within a grid. 
+
+The below snippet 
+
+```html
+  <div class="container my-container">
+        <div class="row my-row justify-content-between my-row-big">
+            <div class="col-4 my-col">
+                Row 1 Col 1
+            </div>
+            <div class="col-4 my-col">
+                Row 1 Col 2
+            </div>
+        </div>
+        <div class="row my-row-big">
+            <div class="col my-col">
+                Row 2 Col 1
+            </div>
+        </div>
+    </div>
+```
+
+will look as follows
+
+
+![alt text](ss_04.png "justify-content-between")
+
+The key here is the `justify-content-between` class which will push `Row 1 Col 1` and `Row 1 Col 2` to both extremes. This is clearly inspired from flexbox and the names of the classes are quite similiar
+
+
 
